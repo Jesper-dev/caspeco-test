@@ -15,3 +15,8 @@ export const Wrapper = styled.div`
     height: 300px;
     background-color: ${(props) => props.changeColor ? 'lightpink' : 'aquamarine'};
 `
+
+export const Text = styled.p`
+    margin: 0%;
+    font-size: 0.8rem;
+`

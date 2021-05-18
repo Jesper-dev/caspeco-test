@@ -9,6 +9,7 @@ function App() {
   let bgB = localStorage.getItem('backgroundB')
   const [changeColorA, setChangeColorA] = useState(false)
   const [changeColorB, setChangeColorB] = useState(false)
+  const [text, setText] = useState('')
   useEffect(() => {
 
     if(bgA === 'true') {
@@ -16,8 +17,6 @@ function App() {
     } else if(bgB === 'true') {
       setChangeColorB(true)
     }
-    console.log('bgA is: ', bgA)
-    console.log('bgB is: ', typeof bgB)
   }, [])
 
 
@@ -37,8 +36,8 @@ function App() {
   }
   return (
     <PageContainer>
-      <ComponentA changeColorFunc={changeColorFunc} changeColorValue={changeColorA}/>
-      <ComponentB changeColorFunc={changeColorFunc} changeColorValue={changeColorB}/>
+      <ComponentA changeColorFunc={changeColorFunc} changeColorValue={changeColorA} text={text} setText={setText}/>
+      <ComponentB changeColorFunc={changeColorFunc} changeColorValue={changeColorB} text={text}/>
     </PageContainer>
   );
 }
