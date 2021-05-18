@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { Wrapper } from '../../indexStyles'
 
 export default class ComponentB extends Component {
     render() {
         return (
-            <div className={"component"}>
+            <Wrapper>
                 <span className={"component_title"}> Component B </span>
-            </div>
+            </Wrapper>
         )
     }
 }
