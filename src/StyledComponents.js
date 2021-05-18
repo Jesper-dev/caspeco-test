@@ -18,5 +18,5 @@ export const Wrapper = styled.div`
 
 export const Text = styled.p`
     margin: 0%;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 `

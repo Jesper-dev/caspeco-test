@@ -7,17 +7,16 @@ import { PageContainer } from './StyledComponents'
 function App() {
   let bgA = localStorage.getItem('backgroundA')
   let bgB = localStorage.getItem('backgroundB')
+  let localText = localStorage.getItem('text')
   const [changeColorA, setChangeColorA] = useState(false)
   const [changeColorB, setChangeColorB] = useState(false)
-  const [text, setText] = useState('')
+  const [text, setText] = useState(localText)
   useEffect(() => {
+    localStorage.setItem('text', text)
+    if(bgA === 'true') setChangeColorA(true)
+    else if(bgB === 'true') setChangeColorB(true)
 
-    if(bgA === 'true') {
-      setChangeColorA(true)
-    } else if(bgB === 'true') {
-      setChangeColorB(true)
-    }
-  }, [])
+  }, [text])
 
 
   const changeColorFunc = (e) => {
