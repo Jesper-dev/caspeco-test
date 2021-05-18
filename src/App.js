@@ -1,13 +1,14 @@
 import './App.css';
 import ComponentA from './components/componentA';
 import ComponentB from './components/componentB';
+import { PageContainer } from './StyledComponents'
 
 function App() {
   return (
-    <div className="App">
+    <PageContainer>
       <ComponentA />
       <ComponentB />
-    </div>
+    </PageContainer>
   );
 }
 

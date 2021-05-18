@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Wrapper } from '../../indexStyles'
+import { Wrapper } from '../../StyledComponents'
 
 export default class ComponentA extends Component {
     render() {
